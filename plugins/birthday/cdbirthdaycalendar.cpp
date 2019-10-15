@@ -22,9 +22,10 @@
  **/
 
 #include <QStringBuilder>
-
+#include <QContactId>
 #include <QContactName>
 #include <QContactBirthday>
+#include <QContactDisplayLabel>
 
 #include <MLocale>
 

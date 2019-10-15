@@ -1,5 +1,5 @@
 Name: contactsd
-Version: 1.3.4
+Version: 1.4
 Release: 1
 Summary: Telepathy <> QtContacts bridge for contacts
 Group: System/Libraries
@@ -14,7 +14,6 @@ BuildRequires: pkgconfig(Qt5DBus)
 BuildRequires: pkgconfig(Qt5Network)
 BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: pkgconfig(TelepathyQt5)
-BuildRequires: pkgconfig(Qt5Contacts)
 BuildRequires: pkgconfig(Qt5Versit)
 # mlite required only for tests
 BuildRequires: pkgconfig(mlite5)
@@ -35,6 +34,9 @@ BuildRequires: qt5-qttools
 BuildRequires: qt5-qttools-linguist
 Requires: libqofono-qt5 >= 0.67
 Requires: mapplauncherd-qt5
+#Because pkgconfig QtContacts always return 5.0.0 use packages version
+BuildRequires:  qt5-qtpim-contacts-devel >= 5.8
+Requires: qt5-qtpim-contacts >= 5.8
 
 %description
 %{name} is a service for collecting and observing changes in roster list
@@ -82,7 +84,7 @@ Requires: blts-tools
 
 %package ts-devel
 Summary: Translation source for %{name}
-Group: System/Applications
+Group: Development/Languages
 
 %description ts-devel
 Translation source for %{name}
