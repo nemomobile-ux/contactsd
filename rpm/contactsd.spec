@@ -69,18 +69,18 @@ Requires: %{name} = %{version}-%{release}
 %{_libdir}/pkgconfig/*.pc
 
 
-%package tests
-Summary: Tests for %{name}
-Group: Development/Libraries
-Requires: %{name} = %{version}-%{release}
-Requires: blts-tools
+# %package tests
+# Summary: Tests for %{name}
+# Group: Development/Libraries
+# Requires: %{name} = %{version}-%{release}
+# Requires: blts-tools
 
-%description tests
-%{summary}.
+# %description tests
+# %{summary}.
 
-%files tests
-%defattr(-,root,root,-)
-/opt/tests/%{name}
+# %files tests
+# %defattr(-,root,root,-)
+# /opt/tests/%{name}
 
 %package ts-devel
 Summary: Translation source for %{name}

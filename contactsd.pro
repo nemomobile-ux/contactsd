@@ -1,7 +1,7 @@
 TEMPLATE = subdirs
 QT -= gui
 
-SUBDIRS += src plugins tests translations
+SUBDIRS += src plugins translations
 plugins.depends = src
 tests.depends = src
 
