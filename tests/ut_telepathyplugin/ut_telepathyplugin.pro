@@ -42,7 +42,7 @@ DEFINES += ENABLE_DEBUG
 PKGCONFIG += Qt5Contacts TelepathyQt5 telepathy-glib dbus-glib-1 gio-2.0
 
 system(cp $$PWD/../../plugins/telepathy/com.nokia.contacts.buddymanagement.xml .)
-system(qdbusxml2cpp -c BuddyManagementInterface -p buddymanagementinterface.h:buddymanagementinterface.cpp com.nokia.contacts.buddymanagement.xml)
+system($$[QT_INSTALL_BINS]/qdbusxml2cpp -c BuddyManagementInterface -p buddymanagementinterface.h:buddymanagementinterface.cpp com.nokia.contacts.buddymanagement.xml)
 
 INCLUDEPATH += ..
 QMAKE_LIBDIR += ../libtelepathy

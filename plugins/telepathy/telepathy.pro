@@ -30,8 +30,8 @@ CONFIG += c++11
 PKGCONFIG += Qt5Contacts
 PKGCONFIG += TelepathyQt5 qtcontacts-sqlite-qt5-extensions mlite5
 
-system(qdbusxml2cpp -c BuddyManagementAdaptor -a buddymanagementadaptor com.nokia.contacts.buddymanagement.xml)
-system(qdbusxml2cpp -c DevicePresenceAdaptor -a devicepresenceadaptor org.nemomobile.DevicePresenceIf.xml)
+system($$[QT_INSTALL_BINS]/qdbusxml2cpp -c BuddyManagementAdaptor -a buddymanagementadaptor com.nokia.contacts.buddymanagement.xml)
+system($$[QT_INSTALL_BINS]/qdbusxml2cpp -c DevicePresenceAdaptor -a devicepresenceadaptor org.nemomobile.DevicePresenceIf.xml)
 
 CONFIG(coverage):{
 QMAKE_CXXFLAGS += -c -g  --coverage -ftest-coverage -fprofile-arcs

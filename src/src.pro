@@ -28,7 +28,7 @@ VERSIONED_TARGET = $$TARGET-1.0
 QT += dbus
 QT -= gui
 
-system(qdbusxml2cpp -c ContactsImportProgressAdaptor -a contactsimportprogressadaptor.h:contactsimportprogressadaptor.cpp com.nokia.contacts.importprogress.xml)
+system($$[QT_INSTALL_BINS]/qdbusxml2cpp -c ContactsImportProgressAdaptor -a contactsimportprogressadaptor.h:contactsimportprogressadaptor.cpp com.nokia.contacts.importprogress.xml)
 
 INCLUDEPATH += $$TOP_SOURCEDIR/lib
 LIBS += -export-dynamic
